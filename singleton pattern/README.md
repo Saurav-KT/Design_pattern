@@ -1,3 +1,4 @@
+### Singletons are classes which can be instantiated once, and can be accessed globally.
 #### Singleton is a creational design pattern, which ensures that only one object of its kind exists and provides a single point of access to it for any other code.Just like a global variable, the Singleton pattern lets you access some object from anywhere in the program. However, it also protects that instance from being overwritten by other code.
 
 Singleton has almost the same pros and cons as global variables. Although they’re super-handy, they break the modularity of your code.
