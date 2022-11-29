@@ -24,6 +24,6 @@ if __name__ == "__main__":
 
     process1 = Thread(target=Singleton, args=("saurav", "BLR", "560105"))
     process2 = Thread(target=Singleton, args=("saurav", "BLR", "560106"))
-    # Id returns the location where the variable is stored. both the variable returns the same value
+    # Id returns the location where the variable is stored. both the variable returns the different value
     print(id(process1))
     print(id(process2))

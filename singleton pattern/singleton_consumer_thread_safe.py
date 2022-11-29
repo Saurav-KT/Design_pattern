@@ -30,6 +30,6 @@ if __name__ == "__main__":
     "created (booo!!) RESULT:\n "
 
     process1 = Thread(target=test_singleton, args=("saurav", "Bangalore"))
-    process2 = Thread(target=test_singleton, args=("priya", "Delhi"))
+    process2 = Thread(target=test_singleton, args=("Puneeth", "Delhi"))
     process1.start()
     process2.start()
