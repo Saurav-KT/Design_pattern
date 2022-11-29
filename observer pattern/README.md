@@ -1,23 +1,5 @@
-### Singletons are classes which can be instantiated once, and can be accessed globally.
-#### Singleton is a creational design pattern, which ensures that only one object of its kind exists and provides a single point of access to it for any other code.Just like a global variable, the Singleton pattern lets you access some object from anywhere in the program. However, it also protects that instance from being overwritten by other code.
+### Observer is a behavioral design pattern that allows some objects to notify other objects about changes in their state.
+#### Observer design pattern lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.
 
-Singleton has almost the same pros and cons as global variables. Although they’re super-handy, they break the modularity of your code.
-
-## Naïve Singleton
-It’s pretty easy to implement a sloppy Singleton. You just need to hide the constructor and implement a static creation method.
-
-
-```
-Note:
-The same class behaves incorrectly in a multithreaded environment. Multiple threads can call the creation method simultaneously 
-and get several instances of Singleton class.
-```
-## Singleton with multithreaded
-
-        Possible changes to the value of the `__init__` argument do not affect
-        the returned instance.
-        # Now, imagine that the program has just been launched. Since there's no
-        # Singleton instance yet, multiple threads can simultaneously pass the
-        # previous conditional and reach this point almost at the same time. The
-        # first of them will acquire lock and will proceed further, while the
-        # rest will wait here.
+The object that has some interesting state is often called subject, but since it’s also going to notify other objects about the changes to its state, we’ll call it publisher. All other objects that want to track changes to the publisher’s state are called subscribers.
+The Observer pattern suggests that you add a subscription mechanism to the publisher class so individual objects can subscribe to or unsubscribe from a stream of events coming from that publisher.
